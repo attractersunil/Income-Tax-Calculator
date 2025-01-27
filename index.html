@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Income Tax Calculator</h1>
+        <form id="taxForm">
+            <p>A. Income Details</p>
+            <div>
+                <label for="incomeFromSalary">Income from Salary:</label>
+                <input type="number" id="incomeFromSalary" required>
+            </div>
+            <div>
+                <label for="rentalIncome">Rental Income:</label>
+                <input type="number" id="rentalIncome">
+            </div>
+            <div>
+                <label for="incomeFromInterest">Income from Interest:</label>
+                <input type="number" id="incomeFromInterest">
+            </div>
+            <div>
+                <label for="incomeFromOtherSources">Income from Other Sources:</label>
+                <input type="number" id="incomeFromOtherSources">
+            </div>
+
+            <p>B. Excemption Details</p>
+            <div>
+                <label for="exemptAllowances">Exempt Allowances (HRA, LTA, Professional Tax etc.):</label>
+                <input type="number" id="exemptAllowances">
+            </div>
+
+            <p>C. Deduction Details</p>
+            <div>
+                <label for="applyStandardDeduction">Apply Standard Deduction:</label>
+                <select id="applyStandardDeduction">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div>
+                <label for="basicDeductions">80C - Basic Deductions:</label>
+                <input type="number" id="basicDeductions">
+            </div>
+            <div>
+                <label for="medicalInsurance">80D - Medical Insurance:</label>
+                <input type="number" id="medicalInsurance">
+            </div>
+            <div>
+                <label for="donations">80G - Donations to Charity:</label>
+                <input type="number" id="donations">
+            </div>
+            <div>
+                <label for="homeLoanInterest">24B - Interest on Home Loan:</label>
+                <input type="number" id="homeLoanInterest">
+            </div>
+            <div>
+                <label for="otherDeductions">Other Deductions:</label>
+                <input type="number" id="otherDeductions">
+            </div>
+            <button type="button" onclick="calculateTax()">Calculate Tax</button>
+        </form>
+
+        <!-- Result -->
+        <div class="results" id="results" style="display:none;">
+            <p id="result"></p>
+            <!-- <h3>Old Regime Tax Details</h3>
+            <p id="oldRegime"></p>
+            <h3>New Regime Tax Details</h3>
+            <p id="newRegime"></p> -->
+        </div>
+
+    </div>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
+
